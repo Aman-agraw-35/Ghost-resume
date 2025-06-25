@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import ResumeEditor from './components/ResumeEditor';
-import './App.css';
+import ResumeEditor from './components/resumeEditor';
 
 function App() {
   const [resume, setResume] = useState({
     name: '',
     summary: '',
-    experience: [],
-    education: [],
+    experience: [{ company: '', role: '', duration: '' }],
+    education: [{ institution: '', degree: '', year: '' }],
     skills: []
   });
 
