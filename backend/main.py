@@ -6,7 +6,6 @@ import os
 
 app = FastAPI()
 
-# Allow requests from frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -15,7 +14,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# In-memory or file-based store
 RESUME_FILE = "resume.json"
 
 class EnhanceRequest(BaseModel):
@@ -31,13 +29,11 @@ class Resume(BaseModel):
 
 @app.post("/ai-enhance")
 async def enhance_with_ai(req: EnhanceRequest):
-    # Mocked AI enhancement
     improved = req.content + " (Enhanced by AI)"
     return {"enhanced": improved}
 
 @app.post("/save-resume")
 async def save_resume(resume: Resume):
-    # Save the resume to file
     with open(RESUME_FILE, "w") as f:
         json.dump(resume.dict(), f, indent=2)
     return {"status": "saved"}
@@ -50,4 +46,3 @@ async def get_resume():
         return data
     return {"error": "No resume found"}
 
-# b
