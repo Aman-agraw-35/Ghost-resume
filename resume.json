@@ -1,0 +1,23 @@
+{
+  "name": "Aman Agrawal",
+  "summary": "",
+  "experience": [
+    {
+      "company": "Next Step Veteran",
+      "role": "Full Stack Developer",
+      "duration": "50 days"
+    }
+  ],
+  "education": [
+    {
+      "institution": "IIIT Bhopal",
+      "degree": "Bachelor' s degree",
+      "year": "2022 - 2026"
+    }
+  ],
+  "skills": [
+    "MERN",
+    "NEXTJS",
+    "C++"
+  ]
+}

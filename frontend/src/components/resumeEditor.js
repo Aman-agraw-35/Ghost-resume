@@ -7,12 +7,17 @@ function ResumeEditor({ resume, setResume }) {
   };
 
   const handleEnhance = async (section) => {
+  try {
     const response = await axios.post('http://localhost:8000/ai-enhance', {
       section,
       content: resume[section]
     });
     setResume({ ...resume, [section]: response.data.enhanced });
-  };
+  } catch (error) {
+    console.error("Enhance error:", error);
+    alert("Enhancement failed. Check if backend is running.");
+  }
+};
 
   const handleExperienceChange = (index, key, value) => {
     const updated = [...resume.experience];
