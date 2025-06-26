@@ -1,21 +1,19 @@
 {
-  "name": "Aman Agrawal",
-  "summary": "aaaa",
+  "name": "",
+  "summary": "a,a,a",
   "experience": [
     {
-      "company": "a",
-      "role": "a",
-      "duration": "a"
+      "company": "",
+      "role": "",
+      "duration": ""
     }
   ],
   "education": [
     {
-      "institution": "a",
-      "degree": "a",
-      "year": "a"
+      "institution": "",
+      "degree": "",
+      "year": ""
     }
   ],
-  "skills": [
-    "c++ (Enhanced by AI)"
-  ]
+  "skills": []
 }
