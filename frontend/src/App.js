@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Resume Editor</h1>
       <ResumeEditor resume={resume} setResume={setResume} />
     </div>
   );
