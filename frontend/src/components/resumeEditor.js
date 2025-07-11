@@ -12,7 +12,7 @@ function ResumeEditor({ resume, setResume }) {
       : resume[section];
 
     try {
-      const response = await axios.post('http://localhost:8000/ai-enhance', {
+      const response = await axios.post('https://ghost-resume-backend.onrender.com/ai-enhance', {
         section,
         content
       });
@@ -71,7 +71,7 @@ function ResumeEditor({ resume, setResume }) {
           : (resume.skills || "").split(',').map(s => s.trim())
       };
 
-      await axios.post('http://localhost:8000/save-resume', validResume);
+      await axios.post('https://ghost-resume-backend.onrender.com/save-resume', validResume);
       alert('Resume saved to backend');
     } catch (error) {
       console.error("Save error:", error.response?.data || error.message);
